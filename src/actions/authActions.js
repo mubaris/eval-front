@@ -1,7 +1,7 @@
 import axios from "axios";
-import { SubmissionError } from 'redux-form';
+import { SubmissionError } from "redux-form";
 import history from "../utils/historyUtils";
-import { actions as notifActions } from 'redux-notifications';
+import { actions as notifActions } from "redux-notifications";
 const { notifSend } = notifActions;
 
 import { AuthTypes } from "../constants/actionTypes";
@@ -78,7 +78,7 @@ export function getUserProfile() {
         if (token) {
             axios.get(AuthUrls.USER_PROFILE, {
                 headers: {
-                    authorization: 'Token ' + token
+                    authorization: "Token " + token
                 }
             }).then(response => {
                 dispatch(setUserProfile(response.data))
@@ -99,7 +99,7 @@ export function changePassword(formValues, dispatch, props) {
     if (token) {
         return axios.post(changePasswordUrl, formValues, {
             headers: {
-                authorization: 'Token ' + token
+                authorization: "Token " + token
             }
         })
             .then((response) => {
@@ -184,7 +184,7 @@ export function updateUserProfile(formValues, dispatch, props) {
 
     return axios.patch(AuthUrls.USER_PROFILE, formValues, {
         headers: {
-            authorization: 'Token ' + token
+            authorization: "Token " + token
         }
     })
         .then(response => {
@@ -204,7 +204,7 @@ export function updateUserProfile(formValues, dispatch, props) {
 }
 // util functions
 function processServerError(error) {
-    return  Object.keys(error).reduce(function(newDict, key) {
+    return Object.keys(error).reduce(function(newDict, key) {
         if (key === "non_field_errors") {
             newDict["_error"].push(error[key]);
         } else if (key === "token") {

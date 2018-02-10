@@ -32,10 +32,12 @@
     "react/no-did-update-set-state": "error",
     "react/no-unknown-property": "error",
     "react/no-unused-prop-types": "error",
-    "react/prop-types": "error",
+    "react/prop-types": "warn",
     "react/react-in-jsx-scope": "error",
     "no-global-assign": "error",
     "no-multi-spaces": "error",
-    "no-whitespace-before-property": "error"
+    "no-whitespace-before-property": "error",
+    "no-unused-vars": "off",
+    "no-console": "off"
   }
 }

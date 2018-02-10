@@ -1,7 +1,7 @@
 import React from "react";
 
 const Landing = () => (
-    <h1>Welcome to this wonderful site.</h1>
+    <h1>Simple Profile Portal</h1>
 );
 
 export default Landing;

@@ -1,4 +1,4 @@
-const ROOT_URL = "http://localhost:8000/";
+const ROOT_URL = "http://localhost/";
 
 export const AuthUrls = {
     LOGIN: `${ROOT_URL}api/auth/login/`,

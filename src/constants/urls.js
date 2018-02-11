@@ -1,4 +1,4 @@
-const ROOT_URL = "http://localhost/";
+const ROOT_URL = "http://ec2-13-211-29-245.ap-southeast-2.compute.amazonaws.com/";
 
 export const AuthUrls = {
     LOGIN: `${ROOT_URL}api/auth/login/`,
